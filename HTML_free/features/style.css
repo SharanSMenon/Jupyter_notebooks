@@ -16,7 +16,7 @@
     position: fixed;
     padding:5px;
     bottom:10px;
-    right:10px;
+    right:-400px;
     z-index: 6;
     transition:0.5s;
 }
@@ -32,9 +32,13 @@
 .NotbuttonC{
     position:absolute;
     right:10px;
+    bottom:10px;
 }
 .notSource{
     color:#eee;
+    font-size: 10px;
+    position:absolute;
+    bottom:10px;
 }
 .closeNot{
     font-size:20px;

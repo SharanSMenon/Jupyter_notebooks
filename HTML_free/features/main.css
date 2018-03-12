@@ -9,7 +9,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     outline: none;
-    transition:0.5s;
+    transition:0.5s transform;
 }
 button:active{
     transform: scale(0.9);
@@ -283,6 +283,7 @@ input{
     padding: 12px 20px 12px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
+    height:50px;
     box-sizing: border-box;
 }
 #fltul {

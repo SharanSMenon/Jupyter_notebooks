@@ -1,6 +1,14 @@
 var modal = document.querySelector('.modal');
 var modalcontent = document.getElementsByClassName("modal-content")[0];
 var modalbody = document.querySelector('.modal-body');
+function closeNot(id){
+    var notBox = document.getElementsByClassName('notification')[id];
+    notBox.style.right = "-400px"
+}
+function openNot(id) {
+    var notBox = document.getElementsByClassName('notification')[id];
+    notBox.style.right = "10px"
+}
 function openModal() {
     modalcontent.style.webkitAnimationName = "slideIn";
     modal.style.display = "block";

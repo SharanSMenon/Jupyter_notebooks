@@ -23,7 +23,7 @@
         <a href="#modals">Modals and more</a>
         <a href="#contact">Contact</a>
     </div>
-    <div id="snackbar"><span id="snackclose" onclick="snaclose();">&times;</span>This is a snackbar</div>
+    <div id="snackbar"><span id="snackclose" onclick="snaclose();">&times;</span><span id="snacktext">This is a snackbar</span></div>
     <div class="main">
         <h1>Features</h1>
         <p>Welcome to features. This is also a safe website <br> I am not a hacker so you are safe even though <br> your browser says that it is not secure.</p>
@@ -136,17 +136,20 @@
             <span class="popuptext" id="myPopup">This is a popup</span>
         </div>
         <button class="info" onclick="snaToggle()">Show snackbar</button>
-        <button class="danger">Show notification</button>
+        <button class="danger" onclick="openNot(0)">Show notification</button>
+        <br>
         <div class="notification" id="0">
-            <span class="closeNot">&times;</span>
+            <span class="closeNot" onclick="closeNot(0)">&times;</span>
             This is a notification
             <br>
-            <span>Source: </span>
+            <span class="notSource">Source: Tips</span>
             <div class="NotbuttonC">
-                <button>Dismiss</button>
+                <button onclick="closeNot(0)">Dismiss</button>
                 <button>Learn More</button>
             </div>
         </div>
+        <br>
+        <!-- <input id="snackinp" placeholder="Write some text..." maxlength="28" style="width:90%;margin-right:10px;"><button onclick="writeSnack()">Enter</button> -->
         <p>Click on the popup to close it</p>
         <q>If you get the things that you like more often, <br>than you would not get the things that are essential.</q>
         <br>
