@@ -1,0 +1,25 @@
+{
+  "name": "programming",
+  "version": "1.0.0",
+  "description": "Programming by Sharan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SharanSMenon/Jupyter_notebooks.git"
+  },
+  "author": "Sharan Sajiv Menon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SharanSMenon/Jupyter_notebooks/issues"
+  },
+  "homepage": "https://github.com/SharanSMenon/Jupyter_notebooks#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "readline-sync": "^1.4.9",
+    "request": "^2.85.0"
+  }
+}
