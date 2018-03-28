@@ -13,40 +13,27 @@ public class Account {
         this.email = email;
         this.phone = phone;
     }
-    public Account(){
-        System.out.println("Set all fields manually.");
-    }
-    //Constructors can be overloaded.
-    public void setBalance(double balance) {
-        this.balance = balance;
+
+    public Account(String name, String email, String phone) {
+        this("999",300,name,email,phone);
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
     }
 
+    //Constructors can be overloaded.
     public double getBalance() {
         return this.balance;
     }
     //Email
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getEmail() {
         return email;
     }
     //Name
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
     }
     //PN
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getPhone() {
         return phone;
     }
