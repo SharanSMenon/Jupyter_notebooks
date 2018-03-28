@@ -1,7 +1,7 @@
 .tmp.drivedownload
 .ipynb_checkpoints
 node_modules
+venv
 .vscode
 .idea
 DaddyMacro
-venv
