@@ -14,4 +14,6 @@ console.log("5 is prime: "+numbers.isPrime(5));
 console.log("10 is prime: " + numbers.isPrime(10));
 console.log("10 is even: " + numbers.isEven(10));
 console.log("5 is even: " + numbers.isEven(5));
+console.log(`Law of cosines for a, b = 10 and C = 25: ${numbers.lawOfCosines(10,10,25)}`);
+
 console.log("-----");

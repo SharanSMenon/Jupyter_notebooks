@@ -14,12 +14,13 @@ public class Animal {
         this.weight = weight;
         this.name = name;
     }
-    public void eat(){
+
+    public void eat() {
         System.out.println("Ate something");
     }
 
-    public void move(double feet){
-        System.out.println("Moved "+feet+" feet.");
+    public void move(double feet) {
+        System.out.println("Moved " + feet + " feet.");
     }
 
     public boolean isBrain() {
