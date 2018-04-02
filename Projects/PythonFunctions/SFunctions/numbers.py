@@ -62,6 +62,7 @@ def pythagoreanTheorem(a, b):
 
 
 lawOfCosines = lambda a, b, C: math.sqrt(a ** 2 + b ** 2 - (2 * a * b * (math.cos(math.radians(C)))))
+
 # def lawOfCosines(a, b, C):
 #     prt1 = a**2 + b**2
 #     prt2 = math.cos(math.radians(C)#

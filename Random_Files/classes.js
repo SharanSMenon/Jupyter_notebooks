@@ -3,14 +3,14 @@ class Animal {
     this.name = name;
     this.age = age;
   }
-  getAge(){
+  getAge() {
     return this.age;
   }
-  whoami(){
-    console.log("My name is "+this.name+" and I am a "+this.type);
-    console.log("I am a "+this.species);
+  whoami() {
+    console.log("My name is " + this.name + " and I am a " + this.type);
+    console.log("I am a " + this.species);
   }
-  status(){
+  status() {
     console.log("Animal is fine");
   }
 }
