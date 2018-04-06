@@ -11,10 +11,7 @@ body, input[text], button {
   color: crimson;
   font-family: Cambria, Georgia;
 }
-.mes{
-  background-color: #eee;
-  padding: 5px;
-}
+
 button.clear {
   font-family: Arial;
   background-color: #eee;
