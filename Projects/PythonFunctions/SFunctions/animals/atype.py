@@ -1,4 +1,4 @@
-from animal import Animal
+from SFunctions.animals.animal import Animal
 class Carnivore(Animal):
     def __init__(self, name, age):
         Animal.__init__(self,name,age)

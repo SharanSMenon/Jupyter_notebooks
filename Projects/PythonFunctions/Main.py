@@ -1,5 +1,6 @@
-from SFunctions.lists import *
-from SFunctions.numbers import *
+from SFunctions.NFunctions.lists import *
+from SFunctions.NFunctions.numbers import *
+from SFunctions.NFunctions.strings import *
 import numpy
 
 # Tests
@@ -33,3 +34,9 @@ print("Circumference of circle with radius 5: " + str(circumference(radius=5)))
 print("Circumference of circle with diameter 7: " + str(circumference(diameter=7)))
 print("Hypotenuse for right triangle legs 3 and 4: " + str(pythagoreanTheorem(3, 4)))
 print("Law of cosines for a, b = 10 and C = 25: " + str(lawOfCosines(10, 10, 25)))
+print("-----")
+print("String tests")
+print("Check if 'civic' is a palindrome: "+str(checkPalindrome("civic")))
+print("Check if 'hello' is a palindrome: "+str(checkPalindrome("hello")))
+print("'Hello world' reversed: "+reverse("Hello world"))
+

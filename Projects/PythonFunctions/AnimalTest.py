@@ -1,4 +1,4 @@
-from species import *
+from SFunctions.animals.species import *
 l = Lion("Matsumi", 12)
 l.whoami();
 l.eat()

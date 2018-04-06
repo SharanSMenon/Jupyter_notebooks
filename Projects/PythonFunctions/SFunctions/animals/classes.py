@@ -1,4 +1,4 @@
-from animal import *
+from SFunctions.animals.animal import *
 class Mammal(Animal):
     def __init__(self, name, age):
         self.group = "Mammalia"

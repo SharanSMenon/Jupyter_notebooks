@@ -1,5 +1,5 @@
-from atype import *
-from classes import *
+from SFunctions.animals.classes import *
+from SFunctions.animals.atype import *
 class Lion(Carnivore, Mammal):
     def __init__(self, name, age):
         self.species = "Panthera Leo"
