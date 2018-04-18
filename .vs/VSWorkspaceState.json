@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Random_Files",
+    "\\Projects",
+    "\\Projects\\PyPc",
     "\\Random_Files\\JavascriptRandom",
     "\\Random_Files\\JavascriptRandom\\JR1"
   ],
-  "SelectedNode": "\\Random_Files\\JavascriptRandom\\JR1\\Motherboard.js",
+  "SelectedNode": "\\Projects\\PyPc\\Motherboard.py",
   "PreviewInSolutionExplorer": false
 }

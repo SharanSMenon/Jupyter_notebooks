@@ -20,7 +20,7 @@ function primes(arr){
 }
 console.log("Welcome to primes");
 console.log("Option 1: Check if a number is prime");
-console.log("Option: Find promes in a list from 1 to n");
+console.log("Option 2: Find primes in a list from 1 to n");
 var choice = questionInt("Type in 1 or 2: ");
 if (choice == 1) {
   var num = questionInt("Which number do you want to check? ")
@@ -33,3 +33,4 @@ if (choice == 1) {
   }
   console.log(primes(l));
 }
+console.log("Thank you for visiting today.");

@@ -17,7 +17,8 @@ export class Car {
         this._theTank = theTank;
         this._weight = weight;
         this._model = model;
-	}
+    }
+    
 
     /**
      * Getter theEngine
@@ -49,7 +50,7 @@ export class Car {
      */
 	public get theTank(): Tank {
 		return this._theTank;
-    }
+	}
 
     /**
      * Getter weight
@@ -66,7 +67,55 @@ export class Car {
 	public get model(): string {
 		return this._model;
 	}
-        
+
+    /**
+     * Setter theEngine
+     * @param {Engine} value
+     */
+	public set theEngine(value: Engine) {
+		this._theEngine = value;
+	}
+
+    /**
+     * Setter theCase
+     * @param {Case} value
+     */
+	public set theCase(value: Case) {
+		this._theCase = value;
+	}
+
+    /**
+     * Setter smartSystem
+     * @param {SmartSystem} value
+     */
+	public set smartSystem(value: SmartSystem) {
+		this._smartSystem = value;
+	}
+
+    /**
+     * Setter theTank
+     * @param {Tank} value
+     */
+	public set theTank(value: Tank) {
+		this._theTank = value;
+	}
+
+    /**
+     * Setter weight
+     * @param {number} value
+     */
+	public set weight(value: number) {
+		this._weight = value;
+	}
+
+    /**
+     * Setter model
+     * @param {string} value
+     */
+	public set model(value: string) {
+		this._model = value;
+	}
+    
     public powerUp(): void{
         console.log("Powering up");
         

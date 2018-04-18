@@ -1,5 +1,5 @@
-import Car from Car
-import  from SmartSystem
-import Tank from Tank
-import Car from Engine
-import Hull from Hull
+from Car import Car
+from SmartSystem import SmartSystem
+from Tank import Tank
+from Engine import Engine
+from Hull import Hull

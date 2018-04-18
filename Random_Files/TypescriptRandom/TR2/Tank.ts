@@ -4,6 +4,7 @@ export class Tank {
     private _capacity: number;
     private _fuelType: string;
     private _amountOfFuel: number = 0;
+    private _id: string;
 
     constructor(weight: number, model: string, capacity: number, fuelType: string) {
         this._weight = weight;
@@ -12,46 +13,94 @@ export class Tank {
         this._fuelType = fuelType;
     }
 
+
     /**
      * Getter weight
      * @return {number}
      */
-    public get weight(): number {
-        return this._weight;
-    }
+	public get weight(): number {
+		return this._weight;
+	}
 
     /**
      * Getter model
      * @return {string}
      */
-    public get model(): string {
-        return this._model;
-    }
+	public get model(): string {
+		return this._model;
+	}
 
     /**
      * Getter capacity
      * @return {number}
      */
-    public get capacity(): number {
-        return this._capacity;
-    }
+	public get capacity(): number {
+		return this._capacity;
+	}
 
     /**
      * Getter fuelType
      * @return {string}
      */
-    public get fuelType(): string {
-        return this._fuelType;
-    }
+	public get fuelType(): string {
+		return this._fuelType;
+	}
 
     /**
      * Getter amountOfFuel
-     * @return {number}
+     * @return {number }
      */
-	public get amountOfFuel(): number {
+	public get amountOfFuel(): number  {
 		return this._amountOfFuel;
 	}
-    
+
+    /**
+     * Setter weight
+     * @param {number} value
+     */
+	public set weight(value: number) {
+		this._weight = value;
+	}
+
+    /**
+     * Setter model
+     * @param {string} value
+     */
+	public set model(value: string) {
+		this._model = value;
+	}
+
+    /**
+     * Setter capacity
+     * @param {number} value
+     */
+	public set capacity(value: number) {
+		this._capacity = value;
+	}
+
+    /**
+     * Setter fuelType
+     * @param {string} value
+     */
+	public set fuelType(value: string) {
+		this._fuelType = value;
+    }
+
+    /**
+     * Getter id
+     * @return {string}
+     */
+	public get id(): string {
+		return this._id;
+	}
+
+    /**
+     * Setter id
+     * @param {string} value
+     */
+	public set id(value: string) {
+		this._id = value;
+	}    
 
     /**
      * refuel

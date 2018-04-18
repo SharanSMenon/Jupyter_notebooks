@@ -1,1 +1,3 @@
-tsc test.ts && node test.js
+tsc test.ts
+cls
+node test.js

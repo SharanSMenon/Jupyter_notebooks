@@ -21,70 +21,70 @@ export class SmartSystem {
         }
     }
 
+
     /**
      * Getter model
      * @return {string}
      */
-    public get model(): string {
-        return this._model;
-    }
+	public get model(): string {
+		return this._model;
+	}
 
     /**
      * Getter touchscreen
      * @return {boolean}
      */
-    public get touchscreen(): boolean {
-        return this._touchscreen;
-    }
+	public get touchscreen(): boolean {
+		return this._touchscreen;
+	}
 
     /**
      * Getter TV
      * @return {boolean}
      */
-    public get TV(): boolean {
-        return this._TV;
-    }
+	public get TV(): boolean {
+		return this._TV;
+	}
 
     /**
      * Getter rearCamera
      * @return {boolean}
      */
-    public get rearCamera(): boolean {
-        return this._rearCamera;
-    }
+	public get rearCamera(): boolean {
+		return this._rearCamera;
+	}
 
     /**
      * Getter AirConditioning
      * @return {boolean}
      */
-    public get AirConditioning(): boolean {
-        return this._AirConditioning;
-    }
+	public get AirConditioning(): boolean {
+		return this._AirConditioning;
+	}
 
     /**
      * Getter AirBag
      * @return {boolean }
      */
-    public get AirBag(): boolean {
-        return this._AirBag;
-    }
+	public get AirBag(): boolean  {
+		return this._AirBag;
+	}
 
     /**
      * Getter OS
      * @return {string}
      */
-    public get OS(): string {
-        return this._OS;
-    }
+	public get OS(): string {
+		return this._OS;
+	}
 
     /**
      * Getter ACRange
      * @return {Array<number>}
      */
-    public get ACRange(): Array<number> {
-        return this._ACRange;
-    }
-
+	public get ACRange(): Array<number> {
+		return this._ACRange;
+	}
 
     /**
      * Getter temperature
@@ -93,6 +93,71 @@ export class SmartSystem {
 	public get temperature(): number  {
 		return this._temperature;
 	}
+
+    /**
+     * Setter model
+     * @param {string} value
+     */
+	public set model(value: string) {
+		this._model = value;
+	}
+
+    /**
+     * Setter touchscreen
+     * @param {boolean} value
+     */
+	public set touchscreen(value: boolean) {
+		this._touchscreen = value;
+	}
+
+    /**
+     * Setter TV
+     * @param {boolean} value
+     */
+	public set TV(value: boolean) {
+		this._TV = value;
+	}
+
+    /**
+     * Setter rearCamera
+     * @param {boolean} value
+     */
+	public set rearCamera(value: boolean) {
+		this._rearCamera = value;
+	}
+
+    /**
+     * Setter AirConditioning
+     * @param {boolean} value
+     */
+	public set AirConditioning(value: boolean) {
+		this._AirConditioning = value;
+	}
+
+    /**
+     * Setter AirBag
+     * @param {boolean } value
+     */
+	public set AirBag(value: boolean ) {
+		this._AirBag = value;
+	}
+
+    /**
+     * Setter OS
+     * @param {string} value
+     */
+	public set OS(value: string) {
+		this._OS = value;
+	}
+
+    /**
+     * Setter ACRange
+     * @param {Array<number>} value
+     */
+	public set ACRange(value: Array<number>) {
+		this._ACRange = value;
+	}
+    
     
     /**
      * turnAcOn
@@ -127,5 +192,6 @@ export class SmartSystem {
             
         }
     }
+
 
 }

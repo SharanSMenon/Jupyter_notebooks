@@ -17,6 +17,13 @@ var Car = /** @class */ (function () {
         get: function () {
             return this._theEngine;
         },
+        /**
+         * Setter theEngine
+         * @param {Engine} value
+         */
+        set: function (value) {
+            this._theEngine = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -27,6 +34,13 @@ var Car = /** @class */ (function () {
          */
         get: function () {
             return this._theCase;
+        },
+        /**
+         * Setter theCase
+         * @param {Case} value
+         */
+        set: function (value) {
+            this._theCase = value;
         },
         enumerable: true,
         configurable: true
@@ -39,6 +53,13 @@ var Car = /** @class */ (function () {
         get: function () {
             return this._smartSystem;
         },
+        /**
+         * Setter smartSystem
+         * @param {SmartSystem} value
+         */
+        set: function (value) {
+            this._smartSystem = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -49,6 +70,13 @@ var Car = /** @class */ (function () {
          */
         get: function () {
             return this._theTank;
+        },
+        /**
+         * Setter theTank
+         * @param {Tank} value
+         */
+        set: function (value) {
+            this._theTank = value;
         },
         enumerable: true,
         configurable: true
@@ -61,6 +89,13 @@ var Car = /** @class */ (function () {
         get: function () {
             return this._weight;
         },
+        /**
+         * Setter weight
+         * @param {number} value
+         */
+        set: function (value) {
+            this._weight = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -71,6 +106,13 @@ var Car = /** @class */ (function () {
          */
         get: function () {
             return this._model;
+        },
+        /**
+         * Setter model
+         * @param {string} value
+         */
+        set: function (value) {
+            this._model = value;
         },
         enumerable: true,
         configurable: true

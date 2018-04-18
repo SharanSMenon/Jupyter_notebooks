@@ -1,5 +1,5 @@
 def checkPrimes(n):
-    for k in range(2 , n - 1):
+    for k in range(2 , int(n / 2)):
         if n % k == 0:
             return False
     return True
@@ -12,7 +12,7 @@ def primes(lst):
 l = [i for i in range(0,100)]
 print("Welcome to primes")
 print("Option 1: Check if a number is prime")
-print("Option: Find promes in a list from 1 to n")
+print("Option 2: Find primes in a list from 1 to n")
 choice = input("Type in 1 or 2: ")
 choice.replace(" ","")
 if choice == "1":

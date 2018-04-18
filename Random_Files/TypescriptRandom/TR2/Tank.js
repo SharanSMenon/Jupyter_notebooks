@@ -16,6 +16,13 @@ var Tank = /** @class */ (function () {
         get: function () {
             return this._weight;
         },
+        /**
+         * Setter weight
+         * @param {number} value
+         */
+        set: function (value) {
+            this._weight = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -26,6 +33,13 @@ var Tank = /** @class */ (function () {
          */
         get: function () {
             return this._model;
+        },
+        /**
+         * Setter model
+         * @param {string} value
+         */
+        set: function (value) {
+            this._model = value;
         },
         enumerable: true,
         configurable: true
@@ -38,6 +52,13 @@ var Tank = /** @class */ (function () {
         get: function () {
             return this._capacity;
         },
+        /**
+         * Setter capacity
+         * @param {number} value
+         */
+        set: function (value) {
+            this._capacity = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -49,16 +70,30 @@ var Tank = /** @class */ (function () {
         get: function () {
             return this._fuelType;
         },
+        /**
+         * Setter fuelType
+         * @param {string} value
+         */
+        set: function (value) {
+            this._fuelType = value;
+        },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(Tank.prototype, "amountOfFuel", {
         /**
          * Getter amountOfFuel
-         * @return {number}
+         * @return {number }
          */
         get: function () {
             return this._amountOfFuel;
+        },
+        /**
+         * Setter amountOfFuel
+         * @param {number } value
+         */
+        set: function (value) {
+            this._amountOfFuel = value;
         },
         enumerable: true,
         configurable: true

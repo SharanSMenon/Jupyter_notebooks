@@ -16,6 +16,13 @@ var Engine = /** @class */ (function () {
         get: function () {
             return this._model;
         },
+        /**
+         * Setter model
+         * @param {string} value
+         */
+        set: function (value) {
+            this._model = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -26,6 +33,13 @@ var Engine = /** @class */ (function () {
          */
         get: function () {
             return this._manufacturer;
+        },
+        /**
+         * Setter manufacturer
+         * @param {string} value
+         */
+        set: function (value) {
+            this._manufacturer = value;
         },
         enumerable: true,
         configurable: true
@@ -38,6 +52,13 @@ var Engine = /** @class */ (function () {
         get: function () {
             return this._type;
         },
+        /**
+         * Setter type
+         * @param {string} value
+         */
+        set: function (value) {
+            this._type = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -48,6 +69,13 @@ var Engine = /** @class */ (function () {
          */
         get: function () {
             return this._cylinders;
+        },
+        /**
+         * Setter cylinders
+         * @param {number} value
+         */
+        set: function (value) {
+            this._cylinders = value;
         },
         enumerable: true,
         configurable: true
@@ -60,6 +88,13 @@ var Engine = /** @class */ (function () {
         get: function () {
             return this._horsepower;
         },
+        /**
+         * Setter horsepower
+         * @param {number} value
+         */
+        set: function (value) {
+            this._horsepower = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -68,6 +103,12 @@ var Engine = /** @class */ (function () {
      */
     Engine.prototype.start = function () {
         console.log("Starting car.");
+    };
+    /**
+     * stop
+     */
+    Engine.prototype.stop = function () {
+        console.log("Car stopped");
     };
     return Engine;
 }());
