@@ -9,14 +9,14 @@ public class Main {
         System.out.println(myFirstArray[5]);
         int[] myIntArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
         System.out.println(myIntArray[6]);
-        double[] myDoubleArray = new double[10];
-        for (int i = 0; i < 10; i++) {
+        double[] myDoubleArray = new double[14];
+        for (int i = 0; i < myDoubleArray.length; i++) {
             myDoubleArray[i] = i * 10;
         }
         System.out.println("---");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < myDoubleArray.length; i++) {
             System.out.println(myDoubleArray[i]);
         }
-        
+
     }
 }
