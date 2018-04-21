@@ -1,3 +1,4 @@
+# classes = require 'classes.coffee'
 score = 83
 grade = switch
   when score < 60 then 'E'
@@ -11,15 +12,3 @@ numbers = [1..10]
 console.log numbers
 for number in numbers
     console.log "Number: "+number
-class Animal
-    constructor: (@name) -> 
-    move: (meters) -> 
-        console.log(@name + " moved " + meters + " meters.")
-class Horse extends Animal
-    constructor: (name, type) ->
-        super(name)
-    neigh: () ->
-        console.log("Neighhh")
-horse = new Horse("Misty", "Arab Race Horse")
-horse.neigh()
-horse.move(500)
