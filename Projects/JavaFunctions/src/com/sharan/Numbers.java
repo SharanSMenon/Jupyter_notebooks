@@ -22,5 +22,18 @@ public class Numbers {
         return true;
     }
 
-//    public double
+    /*
+     * Efficient algorithm to compute GCD*/
+    public int gcd(int a, int b) {
+        if (b == 0){
+            return a;
+        }
+
+        int ap = a % b;
+        return gcd(b, ap);
+    }
+
+    public long lcm(int a, int b){
+        return a * b / gcd(a, b);
+    }
 }

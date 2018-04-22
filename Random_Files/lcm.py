@@ -1,6 +1,3 @@
-# Uses python3
-import sys
-
 def gcd(a, b):
     """
     An efficient algorithm to compute GCD \n
@@ -13,7 +10,11 @@ def gcd(a, b):
     ap = a % b
     return gcd(b, ap)
 
-if __name__ == "__main__":
-    input = sys.stdin.read()
-    a, b = map(int, input.split())
-    print(gcd(a, b))
+
+def lcm(a, b):
+    """
+    An efficient algorithm to calculate LCM \n
+    This algorithm works efficiently.
+    """
+    return a * b // gcd(a, b)
+print(lcm(2203,123))

@@ -1,4 +1,5 @@
 # classes = require 'classes.coffee'
+classes = require './classes'
 score = 83
 grade = switch
   when score < 60 then 'E'

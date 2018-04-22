@@ -1,5 +1,5 @@
-export class Case {
-  constructor () {
-    
+export class ClassName {
+  constructor() {
+
   }
 }
