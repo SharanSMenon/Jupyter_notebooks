@@ -1,25 +1,33 @@
+import java.math.BigInteger;
 import java.util.*;
 
 public class FibonacciPartialSum {
     private static long getFibonacciPartialSumNaive(long from, long to) {
-        long sum = 0;
-
-        long current = 0;
-        long next  = 1;
-
-        for (long i = 0; i <= to; ++i) {
-            if (i >= from) {
-                sum += current;
-            }
-
-            long new_current = next;
-            next = next + current;
-            current = new_current;
+        ArrayList<BigInteger> f = new ArrayList<>();
+        ArrayList<BigInteger> filtered = new ArrayList<>();
+        f.add(BigInteger.ZERO);
+        f.add(BigInteger.ONE);
+        for (int i = 2; i < (int) to + 1; i++) {
+            f.add(f.get(i - 1).add(f.get(i - 2)));
         }
-
-        return sum % 10;
+        BigInteger sum = BigInteger.ZERO;
+        for (int i = (int) from; i < (int) to + 1; i++) {
+            filtered.add(f.get(i));
+        }
+        for (BigInteger i : filtered) {
+            sum = sum.add(i);
+        }
+        String sumString = sum.toString();
+        String lastChar = Character.toString(sumString.charAt(sumString.length() - 1));
+        return Long.parseLong(lastChar);
     }
-    
+
+    public static void printArray(ArrayList<BigInteger> array) {
+        for (int i = 0; i < array.size(); i++) {
+            System.out.println("Element " + i + ", Value: " + array.get(i));
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         long from = scanner.nextLong();
@@ -27,4 +35,3 @@ public class FibonacciPartialSum {
         System.out.println(getFibonacciPartialSumNaive(from, to));
     }
 }
-

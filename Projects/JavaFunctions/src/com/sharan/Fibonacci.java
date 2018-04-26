@@ -6,8 +6,16 @@ import java.util.Scanner;
 
 
 public final class Fibonacci {
+    // Creating a scanner for the main method
     private static Scanner scanner = new Scanner(System.in);
 
+    private Fibonacci() {
+    }
+
+    /**
+     * This times the 2 algorithms in this class
+     * @param args
+     */
     public static void main(String[] args) {
         System.out.println("Enter a number: ");
         int n = scanner.nextInt();
@@ -22,10 +30,13 @@ public final class Fibonacci {
 
     }
 
-    /*
-     * Computes nth fibonacci number
-     * */
-    private static BigInteger fibonacci(int n) {
+    /**
+     * Computes the nth fibonacci number
+     *
+     * @param n
+     * @return
+     */
+    public static BigInteger fibonacci(int n) {
         BigInteger a = BigInteger.ZERO;
         BigInteger b = BigInteger.ONE;
         int m = 0;
@@ -47,6 +58,12 @@ public final class Fibonacci {
         return a;
     }
 
+    /**
+     * Much simpler algorithm for computing fibonacci numbers;
+     *
+     * @param n
+     * @return
+     */
     private static long simpleFibonacci(long n) {
         ArrayList<Long> f = new ArrayList<Long>();
         f.add(0l);
@@ -59,11 +76,23 @@ public final class Fibonacci {
         return f.get(fn);
     }
 
-    // Multiplies two BigIntegers
+    /**
+     * Helper function to multiply two BigIntegers
+     *
+     * @param x
+     * @param y
+     * @return
+     */
     private static BigInteger multiply(BigInteger x, BigInteger y) {
         return x.multiply(y);
     }
 
+    /**
+     * Creates a list of fibonacci numbers
+     *
+     * @param n
+     * @return
+     */
     public static BigInteger[] fibonacciList(int n) {
         BigInteger[] returnArray = new BigInteger[n + 1];
         returnArray[0] = BigInteger.ZERO;
@@ -74,6 +103,11 @@ public final class Fibonacci {
         return returnArray;
     }
 
+    /**
+     * Prints an array
+     *
+     * @param array
+     */
     public static void printArray(BigInteger[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.println("Element " + i + ", Value: " + array[i]);

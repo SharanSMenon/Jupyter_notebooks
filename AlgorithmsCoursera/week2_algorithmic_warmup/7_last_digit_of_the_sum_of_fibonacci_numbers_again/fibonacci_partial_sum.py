@@ -1,22 +1,17 @@
 # Uses python3
 import sys
-
-def fibonacci_partial_sum_naive(from_, to):
-    sum = 0
-
-    current = 0
-    next  = 1
-
-    for i in range(to + 1):
-        if i >= from_:
-            sum += current
-
-        current, next = next, current + next
-
-    return sum % 10
-
+from functools import reduce
+def partial_sum(from_, to):
+    f = [0, 1]
+    for i in range(2, to + 1):
+        f.append(f[i - 1] + f[i - 2])
+    filtered = f[from_:to + 1]
+    sm = str(reduce(lambda a, b: a + b, filtered))
+    return int(sm[-1])
 
 if __name__ == '__main__':
-    input = sys.stdin.read();
+    input = sys.stdin.read()
     from_, to = map(int, input.split())
-    print(fibonacci_partial_sum_naive(from_, to))
+    # from_ = int(input("Enter number 1: "))
+    # to= int(input("Enter number 2: "))
+    print(partial_sum(from_, to))

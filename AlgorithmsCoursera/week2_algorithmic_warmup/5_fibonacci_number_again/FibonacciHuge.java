@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.*;
 
 public class FibonacciHuge {
@@ -27,17 +28,21 @@ public class FibonacciHuge {
         return a;
     }
 
-    private static long getFibonacciHugeNaive(long n, long m) {
+    private static long getFibonacciHugeNaive(long n, int m) {
         if (n <= 1)
             return n;
-
-        Long l = fibonacci(n);
+        String j = Long.toString(m);
+        BigInteger l = fibonacci((int) n);
+        BigInteger k = new BigInteger(j);
+        return (l.mod(k)).longValue();
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter first value: ");
         long n = scanner.nextLong();
-        long m = scanner.nextLong();
+        System.out.println("Enter next value: ");
+        int m = scanner.nextInt();
         System.out.println(getFibonacciHugeNaive(n, m));
     }
 }
