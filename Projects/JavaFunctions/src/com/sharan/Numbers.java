@@ -28,7 +28,7 @@ public class Numbers {
     }
 
     /**
-     * Checks if number is prime
+     * Checks if number is prime     *
      *
      * @param x
      */
@@ -83,4 +83,30 @@ public class Numbers {
     public static double lawOfCosinesGamma(double a, double b, double c) {
         return Math.toDegrees(Math.acos(((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b))));
     }
+
+    /**
+     * Uses the Pythagorean Theorem to find length of side c
+     *
+     * @param a
+     * @param b
+     * @return length of side C
+     */
+    public static double pythagoreanTheorem(double a, double b) {
+        return Math.sqrt(Math.pow(a, 2d) + Math.pow(b, 2d));
+    }
+
+    /**
+     * Main method
+     * @param args
+     */
+    public static void main(String[] args){
+        System.out.println("10 is prime: " + isPrime(10));
+        System.out.println("5 is prime: " + isPrime(5));
+        System.out.println("LCM of 534 and 343: " + lcm(534, 343));
+        System.out.println("Law of cosines for a = 5, b = 4, and C = 60: " + lawOfCosinesNormal(5, 4, 60));
+        System.out.println("Calculating C with law of cosines when a = 5, b = 4, and c = 6: " + lawOfCosinesGamma(5, 4, 6));
+        System.out.println("Finding c using the Pythagorean Theorem when a = 3 and b = 4: " + pythagoreanTheorem(3d, 4d));
+    }
+
+
 }

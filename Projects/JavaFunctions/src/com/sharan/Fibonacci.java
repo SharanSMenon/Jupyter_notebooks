@@ -9,11 +9,15 @@ public final class Fibonacci {
     // Creating a scanner for the main method
     private static Scanner scanner = new Scanner(System.in);
 
+    /**
+     * To make sure that this class cannot be initialized.
+     */
     private Fibonacci() {
     }
 
     /**
      * This times the 2 algorithms in this class
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -34,7 +38,7 @@ public final class Fibonacci {
      * Computes the nth fibonacci number
      *
      * @param n
-     * @return
+     * @return nth fibonacci number
      */
     public static BigInteger fibonacci(int n) {
         BigInteger a = BigInteger.ZERO;
@@ -62,7 +66,7 @@ public final class Fibonacci {
      * Much simpler algorithm for computing fibonacci numbers;
      *
      * @param n
-     * @return
+     * @return nth fibonacci number
      */
     private static long simpleFibonacci(long n) {
         ArrayList<Long> f = new ArrayList<Long>();
@@ -81,7 +85,7 @@ public final class Fibonacci {
      *
      * @param x
      * @param y
-     * @return
+     * @return x multiplied by y
      */
     private static BigInteger multiply(BigInteger x, BigInteger y) {
         return x.multiply(y);
@@ -91,7 +95,7 @@ public final class Fibonacci {
      * Creates a list of fibonacci numbers
      *
      * @param n
-     * @return
+     * @return a list of fibonacci numbers from 0 to n
      */
     public static BigInteger[] fibonacciList(int n) {
         BigInteger[] returnArray = new BigInteger[n + 1];
