@@ -91,7 +91,7 @@ public class Numbers {
      * @param b
      * @return length of side C
      */
-    public static double pythagoreanTheorem(double a, double b) {
+    public static double pythagoreanTheoremHypotenuse(double a, double b) {
         return Math.sqrt(Math.pow(a, 2d) + Math.pow(b, 2d));
     }
 
@@ -105,7 +105,7 @@ public class Numbers {
         System.out.println("LCM of 534 and 343: " + lcm(534, 343));
         System.out.println("Law of cosines for a = 5, b = 4, and C = 60: " + lawOfCosinesNormal(5, 4, 60));
         System.out.println("Calculating C with law of cosines when a = 5, b = 4, and c = 6: " + lawOfCosinesGamma(5, 4, 6));
-        System.out.println("Finding c using the Pythagorean Theorem when a = 3 and b = 4: " + pythagoreanTheorem(3d, 4d));
+        System.out.println("Finding the hypotenuse using the Pythagorean Theorem when a = 3 and b = 4: " + pythagoreanTheoremHypotenuse(3d, 4d));
     }
 
 
