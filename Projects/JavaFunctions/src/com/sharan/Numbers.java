@@ -97,9 +97,10 @@ public class Numbers {
 
     /**
      * Main method
+     *
      * @param args
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("10 is prime: " + isPrime(10));
         System.out.println("5 is prime: " + isPrime(5));
         System.out.println("LCM of 534 and 343: " + lcm(534, 343));

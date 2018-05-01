@@ -10,7 +10,7 @@ public final class Fibonacci {
     private static Scanner scanner = new Scanner(System.in);
 
     /**
-     * To make sure that this class cannot be initialized.
+     * To make sure that this cannot be initialized
      */
     private Fibonacci() {
     }

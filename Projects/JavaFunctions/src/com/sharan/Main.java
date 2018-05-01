@@ -6,6 +6,13 @@ import java.util.Scanner;
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Main method
+     * Note: If you run the individual files, you
+     * will see the tests run for them
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         boolean quit = false;
         printInstructions();
@@ -32,6 +39,9 @@ public class Main {
         System.out.println("✔ Bye ✔");
     }
 
+    /**
+     * Prints instructions
+     */
     public static void printInstructions() {
         System.out.println("Welcome.");
         System.out.println("You can choose from a few options");
@@ -41,6 +51,9 @@ public class Main {
         System.out.println("3 - Quit");
     }
 
+    /**
+     * Print Instructions for numbers
+     */
     public static void printNumberInstructions() {
         System.out.println("These are instructions for the number functions");
         System.out.println("0 - Print Instructions");
@@ -51,6 +64,9 @@ public class Main {
         System.out.println("5 - Use Pythagorean theorem to find hypotenuse");
     }
 
+    /**
+     * Handle number functions
+     */
     public static void numberHandler() {
         printNumberInstructions();
         System.out.println("To exit the number functions, enter a value greater than 10");
@@ -102,6 +118,9 @@ public class Main {
         }
     }
 
+    /**
+     * Prints String instructions
+     */
     public static void printStringInstructions() {
         System.out.println("0 - Print Instructions");
         System.out.println("1 - Encrypt a string");
@@ -110,11 +129,14 @@ public class Main {
         System.out.println("4 - Reverse a string");
     }
 
+    /**
+     * Handles string functions
+     */
     public static void stringHandler() {
         printStringInstructions();
         System.out.println("Choose a string method: ");
         int choice = scanner.nextInt();
-        String defaultCipher = "qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM0987654321";
+        String defaultCipher = "qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM0987654321)(*&^%$#@!][{/}-+=_<?>:;~'`";
         String strToEncrypt, strToDecrypt, strToReverse, checkPalinStr, cipher;
         switch (choice) {
             case 0:

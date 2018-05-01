@@ -10,6 +10,7 @@ public class StringFunctions {
 
     /**
      * Check is string s is palindrome
+     *
      * @param s
      * @return boolean
      */
@@ -26,6 +27,7 @@ public class StringFunctions {
 
     /**
      * Reverses a string s
+     *
      * @param s
      * @return String
      */
@@ -40,13 +42,14 @@ public class StringFunctions {
 
     /**
      * Encrypts a string with the given cipher
+     *
      * @param s
      * @param cipher
      * @return String
      */
     public static String encrypt(String s, String cipher) {
         String encrypted_word = "";
-        String alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        String alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()[]{}/+-=_<>?`~:;'";
         for (int i = 0; i < s.length(); i++) {
             int index_ = alphabet.indexOf(String.valueOf(s.charAt(i)));
             encrypted_word += cipher.charAt(index_);
@@ -56,13 +59,14 @@ public class StringFunctions {
 
     /**
      * Decrypts a word with the given cipher
+     *
      * @param s
      * @param cipher
      * @return
      */
     public static String decrypt(String s, String cipher) {
         String decrypted_word = "";
-        String alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        String alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()[]{}/+-=_<>?`~:;'";
         for (int i = 0; i < s.length(); i++) {
             int index_ = cipher.indexOf(String.valueOf(s.charAt(i)));
             decrypted_word += alphabet.charAt(index_);
@@ -72,14 +76,16 @@ public class StringFunctions {
 
     /**
      * Main method
+     *
      * @param args
      */
     public static void main(String[] args) {
-        String cipher = "qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM0987654321";
+        String cipher = "qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM0987654321)(*&^%$#@!][{/}-+=_<?>:;~'`";
         System.out.println("Check if 'hello world' is a palindrome: " + checkPalindrome("hello world"));
         System.out.println("Check if 'civic' is a palindrome: " + checkPalindrome("civic"));
         System.out.println("Reverse 'hello world': " + reverse("hello world"));
-        System.out.println("Encrypt 'Hello world 45' with cipher '" + cipher + "': " + encrypt("Hello world 45", cipher));
-        System.out.println("Decrypt 'Itssg vgksr 76' with cipher '" + cipher + "': " + decrypt("Itssg vgksr 76", cipher));
+        System.out.println("Cipher: " + cipher);
+        System.out.println("Encrypt '////Hello world*45-`&$ : " + encrypt("////Hello world*45-`&$", cipher));
+        System.out.println("Decrypt '}}}}Itssg vgksr#76+:$&' : " + decrypt("}}}}Itssg vgksr#76+:$&", cipher));
     }
 }

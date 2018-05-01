@@ -1,5 +1,5 @@
 """
-Functions that can be applied on strings
+Functions that can be applied on strings.
 """
 from functools import reduce
 import operator
