@@ -86,6 +86,6 @@ public class StringFunctions {
         System.out.println("Reverse 'hello world': " + reverse("hello world"));
         System.out.println("Cipher: " + cipher);
         System.out.println("Encrypt '////Hello world*45-`&$ : " + encrypt("////Hello world*45-`&$", cipher));
-        System.out.println("Decrypt '}}}}Itssg vgksr#76+:$&' : " + decrypt("}}}}Itssg vgksr#76+:$&", cipher));
+        System.out.println("Decrypt '}}}}Itssg vgksr#76+:$& : " + decrypt("}}}}Itssg vgksr#76+:$&", cipher));
     }
 }

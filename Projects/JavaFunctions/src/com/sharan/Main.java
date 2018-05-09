@@ -1,6 +1,7 @@
 package com.sharan;
 
 import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
@@ -35,7 +36,7 @@ public class Main {
                 default:
                     System.out.println("Not an valid option");
             }
-        } while (quit == false);
+        } while (!quit);
         System.out.println("✔ Bye ✔");
     }
 
@@ -98,7 +99,7 @@ public class Main {
             case 3:
                 System.out.println("Enter n: ");
                 n = scanner.nextDouble();
-                System.out.println("Answer: " + Fibonacci.fibonacci((int) n));
+                System.out.printf("Answer: %s%n", Fibonacci.fibonacci((int) n));
                 break;
             case 4:
                 System.out.println("Enter your number");

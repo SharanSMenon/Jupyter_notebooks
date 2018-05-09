@@ -2,6 +2,7 @@ package com.sharan;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -40,7 +41,7 @@ public final class Fibonacci {
      * @param n
      * @return nth fibonacci number
      */
-    public static BigInteger fibonacci(int n) {
+    public final static BigInteger fibonacci(int n) {
         BigInteger a = BigInteger.ZERO;
         BigInteger b = BigInteger.ONE;
         int m = 0;
@@ -68,15 +69,12 @@ public final class Fibonacci {
      * @param n
      * @return nth fibonacci number
      */
-    private static long simpleFibonacci(long n) {
-        ArrayList<Long> f = new ArrayList<Long>();
-        f.add(0l);
-        f.add(1l);
-        for (int i = 2; i < n + 1; i++) {
-            f.add(i, (long) f.get(i - 1) + f.get(i - 2));
-
-        }
-        int fn = (int) (long) n;
+    public final static BigInteger simpleFibonacci(long n) {
+        List<BigInteger> f = new ArrayList<>();
+        f.add(BigInteger.ZERO);
+        f.add(BigInteger.ONE);
+        for (int i = 2; i < n + 1; i++) f.add(i, f.get(i - 1).add(f.get(i - 2)));
+        int fn = (int) n;
         return f.get(fn);
     }
 

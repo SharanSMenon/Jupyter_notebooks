@@ -1,16 +1,18 @@
 from SFunctions.NFunctions.lists import *
 from SFunctions.NFunctions.numbers import *
 from SFunctions.NFunctions.strings import *
-import numpy
+import random
 # Tests
 # Lists
 l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print("List " + str(l))
-print("Sum of l: " + str(addList(l)))
+print("Sum of l: " + str(add_list(l)))
 print("All elements in l sqared: " + str(squareList(l)))
-lSort = list(list(numpy.random.randint(low=0, high=10, size=(1, 10)))[0])
+lSort = random.sample(range(150), 32)
 print("Random list to sort: " + str(lSort))
-print("Sorted: " + str(sort(lSort)))
+print("Using the quicksort algorithm: " + str(quick_sort(lSort)))
+print("Using the insertion sort method: " + str(insertion_sort(lSort)))
+print("Using a simple sorting algorithm: "+str(simple_sort(lSort)))
 print("-----")
 # Numbers
 print("5 is prime: " + str(is_prime(5)))
@@ -41,6 +43,6 @@ print("Check if 'civic' is a palindrome: " + str(check_palindrome("civic")))
 print("Check if 'hello' is a palindrome: " + str(check_palindrome("hello")))
 print("'Hello world' reversed: " + reverse("Hello world"))
 print("Most common character in string 'Hello World': " + find_most_common_character("Hello World"))
-cipher = "qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM0987654321"
-print("Encrypt 'Hello world 45' with cipher '" + cipher + "': " + encrypt("Hello world 45", cipher))
-print("Decrypt 'Itssg vgksr 76' with cipher '" + cipher + "': " + decrypt("Itssg vgksr 76", cipher))
+cipher = "qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM0987654321)(*&^%$#@!][{/}-+=_<?>:;~'`"
+print("Encrypt 'Hello world 45' with cipher '" + cipher + "': " + encrypt("////Hello world*45-`&$", cipher))
+print("Decrypt 'Itssg vgksr 76' with cipher '" + cipher + "': " + decrypt("}}}}Itssg vgksr#76+:$&", cipher))

@@ -1,10 +1,40 @@
 # Uses python3
 import sys
+import collections
 
 def fast_count_segments(starts, ends, points):
-    cnt = [0] * len(points)
-    #write your code here
-    return cnt
+    lftlbl, ptlabel, rtlbl = (1, 2, 3)
+    count = [0] * len(points)
+
+    # Regular dict object cannot be used here, because points are not unique.
+    points_map = collections.defaultdict(set)
+
+    pairs = []
+    for i in starts:
+        pairs.append((i, lftlbl))
+    for i in ends:
+        pairs.append((i, rtlbl))
+    for i in range(len(points)):
+        point = points[i]
+        pairs.append((point, ptlabel))
+        points_map[point].add(i)
+
+    sorted_pairs = sorted(pairs, key=lambda p: (p[0], p[1]))
+
+    cvg = 0
+    for pair in sorted_pairs:
+        if pair[1] == lftlbl:
+            cvg += 1
+        if pair[1] == rtlbl:
+            cvg -= 1
+        if pair[1] == ptlabel:
+            indices = points_map[pair[0]]
+            for i in indices:
+                count[i] = cvg
+
+    return count
+
+
 
 def naive_count_segments(starts, ends, points):
     cnt = [0] * len(points)
@@ -14,15 +44,16 @@ def naive_count_segments(starts, ends, points):
                 cnt[i] += 1
     return cnt
 
+
 if __name__ == '__main__':
-    input = sys.stdin.read()
+    input = sys.stdin.read(22)
     data = list(map(int, input.split()))
     n = data[0]
     m = data[1]
     starts = data[2:2 * n + 2:2]
-    ends   = data[3:2 * n + 2:2]
+    ends = data[3:2 * n + 2:2]
     points = data[2 * n + 2:]
-    #use fast_count_segments
-    cnt = naive_count_segments(starts, ends, points)
+    # use fast_count_segments
+    cnt = fast_count_segments(starts, ends, points)
     for x in cnt:
         print(x, end=' ')

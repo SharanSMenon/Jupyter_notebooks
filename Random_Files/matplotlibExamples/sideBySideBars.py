@@ -11,6 +11,8 @@ def create_x(t, w, n, d):
 
 school_a_x = create_x(2, 0.8, 1, 5)
 school_b_x = create_x(2, 0.8, 2, 5)
+print(school_a_x)
+print(school_b_x)
 # Make your chart here
 plt.figure(figsize=(10, 8))
 ax = plt.subplot()
@@ -25,5 +27,5 @@ plt.legend(["Middle School A", "Middle School B"])
 plt.title('Test Averages on Different Units')
 plt.ylabel('test average')
 plt.xlabel('unit')
-plt.savefig('SideBySideBar.png')
+# plt.savefig('SideBySideBar.png')
 plt.show()

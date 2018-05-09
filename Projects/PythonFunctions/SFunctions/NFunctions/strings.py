@@ -45,7 +45,7 @@ def encrypt(s, cipher):
     :return: sting
     """
     encrpyted_word = ""
-    alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+    alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()[]{}/+-=_<>?`~:;'"
     for i in s:
         index_ = alphabet.find(i)
         encrpyted_word += cipher[index_]
@@ -60,7 +60,7 @@ def decrypt(s, cipher):
     :return: string
     """
     decrpyted_word = ""
-    alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+    alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()[]{}/+-=_<>?`~:;'"
     for i in s:
         index_ = cipher.find(i)
         decrpyted_word += alphabet[index_]
