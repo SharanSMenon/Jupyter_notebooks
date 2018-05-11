@@ -2,16 +2,24 @@
 import sys
 import itertools
 
-def partition3(A):
-    for c in itertools.product(range(3), repeat=len(A)):
-        sums = [None] * 3
-        for i in range(3):
-            sums[i] = sum(A[k] for k in range(len(A)) if c[k] == i)
 
-        if sums[0] == sums[1] and sums[1] == sums[2]:
-            return 1
+def isSubsetSum(arr, n, sum):
+    if sum == 0:
+        return 1
+    if n == 0 and sum != 0:
+        return 0
+    if arr[n-1] > sum:
+        return isSubsetSum(arr, n-1, sum)
 
-    return 0
+    return isSubsetSum(arr, n-1, sum) or isSubsetSum(arr, n-1, sum-arr[n-1])
+def partition3(arr):
+    n = len(arr)
+    sum = 0
+    for i in range(0, n):
+        sum += arr[i]
+    if sum % 2 != 0:
+        return 0
+    return isSubsetSum(arr, n, sum // 2)
 
 if __name__ == '__main__':
     input = sys.stdin.read()
