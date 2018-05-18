@@ -18,7 +18,7 @@
   "homepage": "https://github.com/SharanSMenon/Programming-Folder#readme",
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "d3": "^5.0.0",
+    "d3": "^5.4.0",
     "express": "^4.16.3",
     "lodash": "^4.17.5",
     "plotly": "^1.0.6",
